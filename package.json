@@ -1,0 +1,25 @@
+{
+  "name": "playwright-cli-claude",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Playwright TypeScript POM framework driven by playwright-cli + Claude Code Skills.",
+  "scripts": {
+    "test": "playwright test",
+    "test:evidence": "playwright test --trace on",
+    "test:smoke": "playwright test --grep @smoke --trace on",
+    "test:debug": "playwright test --debug --trace on",
+    "evidence:index": "playwright test --reporter=./src/reporters/evidence.ts",
+    "dashboard": "playwright show-report",
+    "trace:last": "playwright show-trace $(ls -t debug/traces/*/trace.zip | head -1)",
+    "codegen": "playwright codegen $BASE_URL"
+  },
+  "devDependencies": {
+    "@playwright/cli": "^0.1.22",
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.3",
+    "@types/pdf-parse": "^1.1.5",
+    "dotenv": "^18.0.4",
+    "pdf-parse": "^2.4.5",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,16 @@
+node_modules/
+.env
+.auth/
+.playwright/
+.playwright-cli/
+test-results/
+playwright-report/
+blob-report/
+debug/traces/
+debug/videos/
+debug/screenshots/
+
+# Keep Skills, specs, the YAML ledger and written reports tracked
+!debug/snapshots/
+!debug/reports/
+!debug/INDEX.md

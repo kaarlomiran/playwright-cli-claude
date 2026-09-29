@@ -1,0 +1,73 @@
+<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="0" time="3.601234">
+<testsuite name="auth/standard-login.spec.ts" timestamp="2026-09-29T17:07:05.284Z" hostname="chromium" tests="1" failures="0" skipped="0" time="1.643" errors="0">
+<testcase name="SauceDemo login › standard user logs in and lands on inventory @smoke @critical" classname="auth/standard-login.spec.ts" time="1.643">
+<properties>
+<property name="spec" value="specs/saucedemo-login.md#1.1">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../traces/auth-standard-login-SauceD-c97f7-on-inventory-smoke-critical-chromium/test-finished-1.png]]
+
+[[ATTACHMENT|../traces/auth-standard-login-SauceD-c97f7-on-inventory-smoke-critical-chromium/video.webm]]
+
+[[ATTACHMENT|../traces/auth-standard-login-SauceD-c97f7-on-inventory-smoke-critical-chromium/trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="checkout/add-two-items-checkout-and-confirm.spec.ts" timestamp="2026-09-29T17:07:05.284Z" hostname="chromium" tests="1" failures="0" skipped="0" time="2.146" errors="0">
+<testcase name="Cart, checkout &amp; confirmation › logged-in user adds two items, checks out, and confirms the order @smoke @critical" classname="checkout/add-two-items-checkout-and-confirm.spec.ts" time="2.146">
+<properties>
+<property name="spec" value="specs/cart-checkout-confirmation.md#1.1">
+</property>
+<property name="ticket" value="tickets/Testkm_SampleTestScopeRequirements.md#TC-02">
+</property>
+<property name="ticket" value="tickets/Testkm_SampleTestScopeRequirements.md#TC-03">
+</property>
+<property name="ticket" value="tickets/Testkm_SampleTestScopeRequirements.md#TC-04">
+</property>
+<property name="ticket" value="tickets/Testkm_SampleTestScopeRequirements.md#TC-05">
+</property>
+<property name="ticket" value="tickets/Testkm_SampleTestScopeRequirements.md#TC-06">
+</property>
+<property name="ticket" value="tickets/Testkm_SampleTestScopeRequirements.md#TC-07">
+</property>
+<property name="owner" value="qa-guild">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../traces/checkout-add-two-items-che-a0304-ms-the-order-smoke-critical-chromium/test-finished-1.png]]
+
+[[ATTACHMENT|../traces/checkout-add-two-items-che-a0304-ms-the-order-smoke-critical-chromium/video.webm]]
+
+[[ATTACHMENT|../traces/checkout-add-two-items-che-a0304-ms-the-order-smoke-critical-chromium/trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="checkout/confirmation-page-pdf-receipt.spec.ts" timestamp="2026-09-29T17:07:05.284Z" hostname="chromium" tests="1" failures="0" skipped="0" time="2.315" errors="0">
+<testcase name="Cart, checkout &amp; confirmation › confirmation page PDF order receipt downloads with correct contents @regression" classname="checkout/confirmation-page-pdf-receipt.spec.ts" time="2.315">
+<properties>
+<property name="spec" value="specs/cart-checkout-confirmation.md#1.2">
+</property>
+<property name="ticket" value="tickets/Testkm_SampleTestScopeRequirements.md#TC-08">
+</property>
+<property name="ticket" value="tickets/Testkm_SampleTestScopeRequirements.md#TC-09">
+</property>
+<property name="owner" value="qa-guild">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../traces/checkout-confirmation-page-c9f43-correct-contents-regression-chromium/test-finished-1.png]]
+
+[[ATTACHMENT|../traces/checkout-confirmation-page-c9f43-correct-contents-regression-chromium/video.webm]]
+
+[[ATTACHMENT|../traces/checkout-confirmation-page-c9f43-correct-contents-regression-chromium/trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
