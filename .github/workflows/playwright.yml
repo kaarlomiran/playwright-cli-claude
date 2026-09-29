@@ -24,8 +24,6 @@ jobs:
 
       - name: Run tests
         run: npm run test:evidence
-        env:
-          BASE_URL: ${{ vars.BASE_URL }}
 
       # Runs even if the test step above failed, so a red run still
       # publishes its evidence instead of hiding the failure.
