@@ -1,0 +1,9 @@
+{
+  "customerInfo": { "firstName": "Test", "lastName": "User", "zip": "12345" },
+  "cartItems": [
+    { "name": "Sauce Labs Backpack", "price": 29.99 },
+    { "name": "Sauce Labs Bike Light", "price": 9.99 }
+  ],
+  "payment": "SauceCard #31337",
+  "shipping": "Free Pony Express Delivery!"
+}
