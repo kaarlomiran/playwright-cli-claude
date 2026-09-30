@@ -10,6 +10,7 @@
     "test:debug": "playwright test --debug --trace on",
     "evidence:index": "playwright test --reporter=./src/reporters/evidence.ts",
     "dashboard": "playwright show-report",
+    "watch": "playwright cli show --port 4949",
     "trace:last": "playwright show-trace $(ls -t debug/traces/*/trace.zip | head -1)",
     "codegen": "playwright codegen $BASE_URL"
   },
