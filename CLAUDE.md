@@ -48,7 +48,19 @@ failure to make a run go green.
 | Live-attach debug | `npx playwright test <file> --debug=cli` (bg) then `playwright-cli attach tw-XXXX` |
 | Open a trace (GUI, human only) | `npx playwright show-trace debug/traces/<dir>/trace.zip` |
 | Explore live app  | `playwright-cli open <url>`                        |
-| Dashboard         | `npm run dashboard`                                |
+| Dashboard (post-run HTML report) | `npm run dashboard`                |
+| Watch a live session | `npm run watch` (= `playwright cli show --port 4949`; needs an open `playwright-cli` session) |
+
+Three different things are all casually called "the dashboard" here — keep
+them straight: `npm run dashboard` (`show-report`) is the **post-run** HTML
+report; `npm run trace:last` (`show-trace`) is a **post-run** single trace;
+`npm run watch` (`playwright cli show`) is a **live** view of a session
+that's running right now, with remote control (click into the viewport,
+Escape to release). `show --annotate` switches it into annotation mode —
+verified 2026-09-30: it writes nothing to `debug/` on its own; a submitted
+annotation comes back inline in that command's own output. Always
+`playwright cli show --kill` when done — it runs as a background daemon
+and won't stop on its own.
 
 ## Conventions (summary — full rules in the pom-framework skill)
 - Specs import from `src/fixtures/base.ts`, never `@playwright/test`
@@ -72,6 +84,9 @@ failure to make a run go green.
   This repo's setup found several documented commands (`trace open`,
   `--output` flags, `storage-state`) that don't exist in the installed
   0.1.22 alpha; see git history / setup notes for what replaced them.
+- Leave a `playwright cli show` dashboard daemon running after you're
+  done with it — `--kill` it, or a stale one sits there past the
+  session that opened it.
 
 ## Layout
 `specs/` test plans · `tickets/` pasted acceptance criteria (manual) ·
