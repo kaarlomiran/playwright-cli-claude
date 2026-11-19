@@ -5,6 +5,7 @@ Summary:
 - I will add the prompts later and add more commands to check playwright/traces to investigate any bugs or variances that the playwright-cli had captured
 - Updates to follow on integrating playwright/dashboard and playwright/annotations that will be useful for test executions
 - Updates to follow to resolve action failed runs
+- Jenkins Multibranch Pipeline setup (PR-triggered + merge-triggered runs, independent of the GitHub Actions workflow): see [docs/jenkins-setup.md](docs/jenkins-setup.md) and the root `Jenkinsfile`.
 
 ---
 
