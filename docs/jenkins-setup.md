@@ -9,15 +9,28 @@ workflow.
 
 ## Prerequisites on the Jenkins controller/agent
 
-- **Docker** available on the agent that will run the build (the
-  `Jenkinsfile` uses `agent { docker { image '...' } }`), plus the
-  **Docker Pipeline** plugin.
+- **Node.js 20+** on the agent host's PATH — the `Jenkinsfile` uses
+  `agent any` (runs directly on the Jenkins host, no Docker) and prepends
+  `/opt/homebrew/bin` to `PATH` itself, since a Homebrew-installed Jenkins
+  started via `brew services` launches with a minimal launchd PATH that
+  doesn't include it otherwise.
 - **GitHub Branch Source** plugin (also pulls in Git, GitHub, GitHub API
   plugins) — this is what gives Jenkins PR discovery, not a plain
   single-branch Pipeline job.
 - **HTML Publisher** plugin — for `publishHTML` in the `Jenkinsfile`'s
-  `post` block.
+  `post` block. Not in the default "suggested plugins" set — install it
+  separately via Manage Jenkins → Plugins → Available.
 - JUnit reporting (`junit` step) ships with Jenkins core — no extra plugin.
+
+This repo's actual setup runs Jenkins natively via Homebrew
+(`brew install jenkins-lts && brew services start jenkins-lts`, JENKINS_HOME
+at `~/.jenkins`, port 8080) rather than in Docker — an earlier attempt to
+provision a local Docker runtime (Colima) for a containerized agent hung
+indefinitely on its VM image download in this environment, so builds run
+directly on the host instead. If your Jenkins agent does have a working
+Docker, you can still point `agent` back at a container (e.g.
+`mcr.microsoft.com/playwright:v1.63.0-noble`, which has Node + browsers
+preinstalled) — just also add the **Docker Pipeline** plugin.
 
 ## Create the job
 

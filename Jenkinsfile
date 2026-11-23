@@ -3,16 +3,12 @@
 // this file is discovered on every branch AND every PR — see
 // docs/jenkins-setup.md for the one-time Jenkins-side job/webhook setup.
 //
-// Uses Microsoft's official Playwright Docker image, pinned to the exact
-// @playwright/test version in package.json (1.63.0) so browsers always
-// match the installed library — bump both together when upgrading.
+// Runs directly on the Jenkins agent host (no Docker) — a Homebrew-installed
+// Jenkins (brew services) launches with a minimal launchd PATH that doesn't
+// include Homebrew's own bin dir, so it's prepended explicitly below rather
+// than assumed.
 pipeline {
-  agent {
-    docker {
-      image 'mcr.microsoft.com/playwright:v1.63.0-noble'
-      args '-u root'
-    }
-  }
+  agent any
 
   options {
     timestamps()
@@ -20,10 +16,17 @@ pipeline {
     buildDiscarder(logRotator(numToKeepStr: '30'))
   }
 
+  environment {
+    PATH = "/opt/homebrew/bin:${env.PATH}"
+  }
+
   stages {
     stage('Install dependencies') {
       steps {
         sh 'npm ci'
+        // Browsers aren't preinstalled without the Docker image this
+        // Jenkinsfile used before — installed here instead, every run.
+        sh 'npx playwright install chromium'
       }
     }
 
