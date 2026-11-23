@@ -1,6 +1,6 @@
 # Evidence index
 
-Run: 2026-11-19T14:37:48.068Z · 3 passed, 0 failed
+Run: 2026-11-23T16:26:34.901Z · 3 passed, 0 failed
 
 | test | status | trace | video | screenshot | tags | annotations |
 |---|---|---|---|---|---|---|

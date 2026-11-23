@@ -1,0 +1,13 @@
+{
+  "runs": [
+    {
+      "ts": "2026-11-23T16:26:39.268Z",
+      "build": "local",
+      "results": {
+        "standard user logs in and lands on inventory @smoke @critical": "passed",
+        "logged-in user adds two items, checks out, and confirms the order @smoke @critical": "passed",
+        "confirmation page PDF order receipt downloads with correct contents @regression": "passed"
+      }
+    }
+  ]
+}

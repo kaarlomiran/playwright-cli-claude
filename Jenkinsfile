@@ -21,6 +21,19 @@ pipeline {
   }
 
   stages {
+    stage('Restore flaky history') {
+      steps {
+        script {
+          try {
+            copyArtifacts(projectName: env.JOB_NAME, selector: lastCompleted(),
+                           filter: 'debug/reports/history/flaky-history.json', optional: true)
+          } catch (e) {
+            echo 'No previous history yet'
+          }
+        }
+      }
+    }
+
     stage('Install dependencies') {
       steps {
         sh 'npm ci'
@@ -41,6 +54,7 @@ pipeline {
 
   post {
     always {
+      sh 'npm run flaky || true'
       junit testResults: 'debug/reports/junit-results.xml', allowEmptyResults: true
 
       publishHTML(target: [

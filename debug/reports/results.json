@@ -1,0 +1,491 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/23.3.0/bin/node",
+      "/Users/kaarlomiranda/playwright-cli-claude/node_modules/.bin/playwright",
+      "test"
+    ],
+    "configFile": "/Users/kaarlomiranda/playwright-cli-claude/playwright.config.ts",
+    "rootDir": "/Users/kaarlomiranda/playwright-cli-claude/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 3
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/kaarlomiranda/playwright-cli-claude/debug/traces",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 3
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/kaarlomiranda/playwright-cli-claude/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report",
+          "open": "never"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "debug/reports/junit-results.xml"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "debug/reports/results.json"
+        }
+      ],
+      [
+        "/Users/kaarlomiranda/playwright-cli-claude/src/reporters/evidence.ts",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "auth/standard-login.spec.ts",
+      "file": "auth/standard-login.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "SauceDemo login",
+          "file": "auth/standard-login.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "standard user logs in and lands on inventory @smoke @critical",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "critical"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "spec",
+                      "description": "specs/saucedemo-login.md#1.1"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2541,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "log in as standard_user",
+                          "duration": 525
+                        }
+                      ],
+                      "startTime": "2026-11-23T16:26:30.508Z",
+                      "annotations": [
+                        {
+                          "type": "spec",
+                          "description": "specs/saucedemo-login.md#1.1"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kaarlomiranda/playwright-cli-claude/debug/traces/auth-standard-login-SauceD-c97f7-on-inventory-smoke-critical-chromium/test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/kaarlomiranda/playwright-cli-claude/debug/traces/auth-standard-login-SauceD-c97f7-on-inventory-smoke-critical-chromium/video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kaarlomiranda/playwright-cli-claude/debug/traces/auth-standard-login-SauceD-c97f7-on-inventory-smoke-critical-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "306bcf663d9673687563-86a1ff26dd036b2d4c23",
+              "file": "auth/standard-login.spec.ts",
+              "line": 6,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "checkout/add-two-items-checkout-and-confirm.spec.ts",
+      "file": "checkout/add-two-items-checkout-and-confirm.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Cart, checkout & confirmation",
+          "file": "checkout/add-two-items-checkout-and-confirm.spec.ts",
+          "line": 15,
+          "column": 6,
+          "specs": [
+            {
+              "title": "logged-in user adds two items, checks out, and confirms the order @smoke @critical",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "critical"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "spec",
+                      "description": "specs/cart-checkout-confirmation.md#1.1"
+                    },
+                    {
+                      "type": "ticket",
+                      "description": "tickets/Testkm_SampleTestScopeRequirements.md#TC-02"
+                    },
+                    {
+                      "type": "ticket",
+                      "description": "tickets/Testkm_SampleTestScopeRequirements.md#TC-03"
+                    },
+                    {
+                      "type": "ticket",
+                      "description": "tickets/Testkm_SampleTestScopeRequirements.md#TC-04"
+                    },
+                    {
+                      "type": "ticket",
+                      "description": "tickets/Testkm_SampleTestScopeRequirements.md#TC-05"
+                    },
+                    {
+                      "type": "ticket",
+                      "description": "tickets/Testkm_SampleTestScopeRequirements.md#TC-06"
+                    },
+                    {
+                      "type": "ticket",
+                      "description": "tickets/Testkm_SampleTestScopeRequirements.md#TC-07"
+                    },
+                    {
+                      "type": "owner",
+                      "description": "qa-guild"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 3034,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "log in as standard_user",
+                          "duration": 535
+                        },
+                        {
+                          "title": "add \"Sauce Labs Backpack\" to cart",
+                          "duration": 56
+                        },
+                        {
+                          "title": "add \"Sauce Labs Bike Light\" to cart",
+                          "duration": 182
+                        },
+                        {
+                          "title": "go to cart",
+                          "duration": 39
+                        },
+                        {
+                          "title": "proceed to checkout",
+                          "duration": 48
+                        },
+                        {
+                          "title": "fill checkout information",
+                          "duration": 95
+                        },
+                        {
+                          "title": "finish order",
+                          "duration": 25
+                        },
+                        {
+                          "title": "return to products",
+                          "duration": 28
+                        },
+                        {
+                          "title": "go to cart",
+                          "duration": 99
+                        }
+                      ],
+                      "startTime": "2026-11-23T16:26:30.509Z",
+                      "annotations": [
+                        {
+                          "type": "spec",
+                          "description": "specs/cart-checkout-confirmation.md#1.1"
+                        },
+                        {
+                          "type": "ticket",
+                          "description": "tickets/Testkm_SampleTestScopeRequirements.md#TC-02"
+                        },
+                        {
+                          "type": "ticket",
+                          "description": "tickets/Testkm_SampleTestScopeRequirements.md#TC-03"
+                        },
+                        {
+                          "type": "ticket",
+                          "description": "tickets/Testkm_SampleTestScopeRequirements.md#TC-04"
+                        },
+                        {
+                          "type": "ticket",
+                          "description": "tickets/Testkm_SampleTestScopeRequirements.md#TC-05"
+                        },
+                        {
+                          "type": "ticket",
+                          "description": "tickets/Testkm_SampleTestScopeRequirements.md#TC-06"
+                        },
+                        {
+                          "type": "ticket",
+                          "description": "tickets/Testkm_SampleTestScopeRequirements.md#TC-07"
+                        },
+                        {
+                          "type": "owner",
+                          "description": "qa-guild"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kaarlomiranda/playwright-cli-claude/debug/traces/checkout-add-two-items-che-a0304-ms-the-order-smoke-critical-chromium/test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/kaarlomiranda/playwright-cli-claude/debug/traces/checkout-add-two-items-che-a0304-ms-the-order-smoke-critical-chromium/video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kaarlomiranda/playwright-cli-claude/debug/traces/checkout-add-two-items-che-a0304-ms-the-order-smoke-critical-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1a29683ded54df101952-c6d3f0886a48789cbaa1",
+              "file": "checkout/add-two-items-checkout-and-confirm.spec.ts",
+              "line": 16,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "checkout/confirmation-page-pdf-receipt.spec.ts",
+      "file": "checkout/confirmation-page-pdf-receipt.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Cart, checkout & confirmation",
+          "file": "checkout/confirmation-page-pdf-receipt.spec.ts",
+          "line": 11,
+          "column": 6,
+          "specs": [
+            {
+              "title": "confirmation page PDF order receipt downloads with correct contents @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "spec",
+                      "description": "specs/cart-checkout-confirmation.md#1.2"
+                    },
+                    {
+                      "type": "ticket",
+                      "description": "tickets/Testkm_SampleTestScopeRequirements.md#TC-08"
+                    },
+                    {
+                      "type": "ticket",
+                      "description": "tickets/Testkm_SampleTestScopeRequirements.md#TC-09"
+                    },
+                    {
+                      "type": "owner",
+                      "description": "qa-guild"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 3444,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "log in as standard_user",
+                          "duration": 524
+                        },
+                        {
+                          "title": "add \"Sauce Labs Backpack\" to cart",
+                          "duration": 262
+                        },
+                        {
+                          "title": "add \"Sauce Labs Bike Light\" to cart",
+                          "duration": 57
+                        },
+                        {
+                          "title": "go to cart",
+                          "duration": 31
+                        },
+                        {
+                          "title": "proceed to checkout",
+                          "duration": 50
+                        },
+                        {
+                          "title": "fill checkout information",
+                          "duration": 94
+                        },
+                        {
+                          "title": "finish order",
+                          "duration": 54
+                        },
+                        {
+                          "title": "generate PDF order receipt",
+                          "duration": 712
+                        }
+                      ],
+                      "startTime": "2026-11-23T16:26:30.761Z",
+                      "annotations": [
+                        {
+                          "type": "spec",
+                          "description": "specs/cart-checkout-confirmation.md#1.2"
+                        },
+                        {
+                          "type": "ticket",
+                          "description": "tickets/Testkm_SampleTestScopeRequirements.md#TC-08"
+                        },
+                        {
+                          "type": "ticket",
+                          "description": "tickets/Testkm_SampleTestScopeRequirements.md#TC-09"
+                        },
+                        {
+                          "type": "owner",
+                          "description": "qa-guild"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/kaarlomiranda/playwright-cli-claude/debug/traces/checkout-confirmation-page-c9f43-correct-contents-regression-chromium/test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/kaarlomiranda/playwright-cli-claude/debug/traces/checkout-confirmation-page-c9f43-correct-contents-regression-chromium/video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/kaarlomiranda/playwright-cli-claude/debug/traces/checkout-confirmation-page-c9f43-correct-contents-regression-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0db4b954c9e4ee52a8e0-9a8afc129843cc6586a3",
+              "file": "checkout/confirmation-page-pdf-receipt.spec.ts",
+              "line": 12,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-23T16:26:29.077Z",
+    "duration": 5696.5289999999995,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
