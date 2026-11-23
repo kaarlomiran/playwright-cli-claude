@@ -12,7 +12,8 @@
     "dashboard": "playwright show-report",
     "watch": "playwright cli show --port 4949",
     "trace:last": "playwright show-trace $(ls -t debug/traces/*/trace.zip | head -1)",
-    "codegen": "playwright codegen $BASE_URL"
+    "codegen": "playwright codegen $BASE_URL",
+    "flaky": "tsx .claude/skills/flaky-monitor/scripts/analyze-flaky.ts"
   },
   "devDependencies": {
     "@playwright/cli": "^0.1.22",
@@ -21,6 +22,7 @@
     "@types/pdf-parse": "^1.1.5",
     "dotenv": "^18.0.4",
     "pdf-parse": "^2.4.5",
+    "tsx": "^4.23.15",
     "typescript": "^5.9.3"
   }
 }

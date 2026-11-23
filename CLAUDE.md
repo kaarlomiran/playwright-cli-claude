@@ -50,6 +50,7 @@ failure to make a run go green.
 | Explore live app  | `playwright-cli open <url>`                        |
 | Dashboard (post-run HTML report) | `npm run dashboard`                |
 | Watch a live session | `npm run watch` (= `playwright cli show --port 4949`; needs an open `playwright-cli` session) |
+| Flaky/trend report | `npm run flaky` (writes `debug/reports/FLAKY_REPORT.md`) |
 
 Three different things are all casually called "the dashboard" here — keep
 them straight: `npm run dashboard` (`show-report`) is the **post-run** HTML
@@ -99,3 +100,5 @@ debug/README.md for the full artifact contract) ·
   - `pom-framework/` — this repo's POM conventions
   - `exploration-session/` — human-driven manual testing -> spec input
   - `trace-debug/` — diagnosing failures (real mechanics, see above)
+  - `flaky-monitor/` — rolling flaky/unstable detection across runs,
+    reads `debug/reports/results.json`, writes `debug/reports/FLAKY_REPORT.md`

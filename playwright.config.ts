@@ -14,6 +14,7 @@ export default defineConfig({
     ['list'],
     ['html', { outputFolder: 'playwright-report', open: 'never' }],
     ['junit', { outputFile: 'debug/reports/junit-results.xml' }],
+    ['json', { outputFile: 'debug/reports/results.json' }], // input for the flaky-monitor skill
     ['./src/reporters/evidence.ts'], // writes debug/INDEX.md
   ],
   use: {
